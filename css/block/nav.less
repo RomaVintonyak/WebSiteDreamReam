@@ -1,0 +1,53 @@
+//main: ../style.less
+.nav__menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  height: 15vh;
+  background-color: rgba(@white, 0.9);
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav__list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__logo{
+    width: 200px;
+    height: 147px;
+}
+.nav__item {
+  margin-left: 3rem;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+.nav__link {
+  text-decoration: none;
+  color: @gray;
+  font-family: @josefin;
+  font-weight: 700;
+  font-size: 1.5rem;
+  &:after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 3px;
+    margin-top: 0.3rem;
+    background-color: @orange;
+    transition: width 0.4s linear;
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+.active {
+  color: @orange;
+}
