@@ -1,0 +1,60 @@
+//main: style.less
+.img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .text__left{
+    text-align: left;
+  }
+  .text__right{
+    text-align: right;
+  }
+  .text__center{
+    text-align: center;
+  }
+  .mt-6 {
+    margin-top: 6rem;
+  }
+  .mt-5 {
+    margin-top: 5rem;
+  }
+  .mt-4 {
+    margin-top: 4rem;
+  }
+  .mt-3 {
+    margin-top: 3rem;
+  }
+  .mt-2 {
+    margin-top: 2rem;
+  }
+  .transform {
+    transform: rotate(-45deg);
+  }
+  .uppercase{
+    text-transform: uppercase;
+  }
+  .white{
+    color: @white;
+  }
+  .zoomIn{
+    transition: transform 0.4s linear;
+    &:hover{
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9);
+      cursor: pointer;
+    }
+  }
+  .zoomOut{
+    transition: transform 0.4s linear;
+    &:hover{
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+  }
+  .hide{
+    display: none;
+  }

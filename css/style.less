@@ -1,0 +1,39 @@
+// compress: true
+@import "vars.less";
+
+html {
+  font-size: 15px; 
+}
+body {
+  color: @black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  color: @black;
+  margin: 0;
+  padding: 0;
+  background-color: @white;  
+  overflow-x: hidden;
+ }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+/*vendor*/
+
+/*blocks*/
+@import "block/container.less";
+/*Helpers*/
+@import "help.less";
