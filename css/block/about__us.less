@@ -7,9 +7,6 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  /*background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;*/
 }
 .about__content {
   position: absolute;
@@ -18,13 +15,42 @@
   padding: 0 8rem;
   display: flex;
   align-items: center;
+  @media @lcd {
+    margin-top: 12vh;
+  }
+  @media @notebook {
+    margin-top: 8vh;
+  }
+  @media @tablet {
+    margin-top: 1vh;
+    flex-wrap: wrap;
+    padding: 0 4rem;
+  }
+  @media @mobile {
+    padding: 0 1rem;
+  }
+  @media @mobile-sm{
+    padding: 0 0.5rem;
+  }
 }
 .about__collum {
   &--sm {
     width: 40%;
+    @media @tablet {
+      width: 100%;
+    }
   }
   width: 60%;
   margin-right: 2rem;
+  @media @tablet {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
   &:last-child {
     margin-right: 0;
   }
@@ -34,12 +60,24 @@
     color: @white;
     line-height: 1.5;
     font-size: 1.2rem;
+    @media @mobile {
+      font-size: 1rem;
+    }
+    @media @mobile-sm{
+      font-size: 0.7rem;
+    }
   }
   h2 {
     font-family: @josefin;
     font-weight: 700;
     color: @white;
     font-size: 2.2rem;
+    @media @mobile {
+      font-size: 1.5rem;
+    }
+    @media @mobile-sm {
+      font-size: 1rem;
+    }
   }
 }
 .content__block {
@@ -47,11 +85,31 @@
   z-index: 2;
   margin-top: 40vh;
   display: flex;
+  @media @notebook {
+    padding: 0 2.5rem;
+    margin-top: 36vh;
+  }
+  @media @tablet {
+    margin-top: 30vh;
+  }
+  @media @mobile {
+    flex-wrap: wrap;
+    margin-top: 20vh;
+  }
+  @media @mobile-sm{
+    margin-top: 18vh;
+    padding: 0 1.8rem;
+  }
 }
 .content__block--colum {
   width: 30%;
   margin-right: 3rem;
   transition: all 0.2s linear;
+  @media @mobile {
+    width: 100%;
+    margin-right: 0;
+    text-align: left;
+  }
   &::after {
     content: "";
     display: inline-block;
@@ -60,6 +118,9 @@
     margin-top: 1rem;
     background-color: #00b9e7;
     transition: width 0.8s linear;
+    @media @mobile {
+      margin-top: 0.5rem;
+    }
   }
   &:last-child {
     margin-right: 0;
@@ -81,6 +142,10 @@
     animation-name: fly;
     animation-duration: 4s;
     animation-iteration-count: infinite;
+    @media @mobile {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
   }
   h4 {
     font-family: @josefin;
@@ -88,6 +153,13 @@
     color: @white;
     font-size: 1.5rem;
     margin-bottom: 0.6rem;
+    @media @tablet {
+      font-size: 1.1rem;
+    }
+    @media @mobile {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
   }
   p {
     font-family: @pt-sans;
@@ -95,6 +167,15 @@
     color: @white;
     line-height: 1.5;
     font-size: 1.2rem;
+    @media @tablet {
+      font-size: 1rem;
+    }
+    @media @mobile {
+      font-size: 0.8rem;
+    }
+    @media @mobile-sm{
+      font-size: 0.7rem;
+    }
   }
 }
 @keyframes fly {
