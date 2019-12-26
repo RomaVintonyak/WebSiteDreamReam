@@ -107,10 +107,12 @@
         </div>
       </div>
       <!--footer menu-->
-      <nav class="nav__menu wow fadeInDown" id="navMenu">
-        <div class="container">
+      <div class="container">
+        <nav class="nav__menu wow fadeInDown" id="navMenu">
+          <div class="nav__logo">
+            <p>DreamTeam</p>
+          </div>
           <ul class="nav__list">
-            <p class="nav__logo">DreamTeam</p>
             <li class="nav__item">
               <a class="nav__link" href="../index.html">Головна</a>
             </li>
@@ -129,8 +131,11 @@
               <a class="nav__link" href="../src/contact.html">Контакти</a>
             </li>
           </ul>
-        </div>
-      </nav>
+          <div class="burger_button" id="navToggle">
+            <span class="bubger__icon"></span>
+          </div>
+        </nav>
+      </div>
     </div>
     <!--aside block button-->
     <div class="aside__button">
@@ -146,7 +151,7 @@
     </div>
     <!--Copyright block-->
     <div class="copyright">
-      <p class="copyright__text zoomIn">
+      <p class="copyright__text">
         DreamTeam Developer Studio &copy;2019 -
         <script type="text/javascript">
           document.write(new Date().getFullYear());

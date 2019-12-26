@@ -1,6 +1,6 @@
 $(function() {
   /*counter for index page*/
-  var time = 5;
+  var time = 10;
   $(".content__colum").each(function() {
     $("p").each(function() {
       var i = 1,
@@ -16,5 +16,11 @@ $(function() {
           i++;
         }, step);
     });
+  });
+  /*toggle class for burger button */
+  var burgerBut = $("#navToggle");
+  burgerBut.on("click", function(event){
+    event.preventDefault();
+    $(".bubger__icon").toggleClass("animate__burger");
   });
 });
