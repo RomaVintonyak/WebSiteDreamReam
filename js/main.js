@@ -22,5 +22,6 @@ $(function() {
   burgerBut.on("click", function(event){
     event.preventDefault();
     $(".bubger__icon").toggleClass("animate__burger");
+    $(".nav__list").toggleClass("nav__list-mobile");
   });
 });
