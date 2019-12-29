@@ -24,4 +24,9 @@ $(function() {
     $(".bubger__icon").toggleClass("animate__burger");
     $(".nav__list").toggleClass("nav__list-mobile");
   });
+  /*hover for galery*/
+  var hoverImg = $(".img__content");
+  hoverImg.on("hover", function(){
+    hoverImg.toggleClass("zoomOut");
+  });
 });
