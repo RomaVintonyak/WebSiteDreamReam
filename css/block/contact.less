@@ -1,0 +1,106 @@
+//main: ../style.less
+.contact__bg {
+  background: url(../img/contact/contact.jpg) no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+.contact__overlay {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: rgba(@blue-l, 0.4);
+  width: 100%;
+  height: 100vh;
+}
+.contact__content {
+  display: flex;
+  padding: 0 4rem;
+  margin-top: 6rem;
+}
+.contact__colum {
+  width: 50%;
+}
+.contact__title {
+  color: @white;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: @pt-sans;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  text-shadow: 3px 3px 15px @white;
+  &::after {
+    content: "";
+    display: block;
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 3px;
+    background-color: fade(@white, 60%);
+  }
+}
+.contact__subtitle {
+  font-family: @josefin;
+  font-weight: 700;
+  color: @white;
+  font-size: 1.5rem;
+  margin-bottom: 1.6rem;
+}
+.contact__row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.contact__icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  i {
+    color: @orange;
+    font-size: 2rem;
+    animation-name: spinner;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: spinner;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 3s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+}
+.contact__text {
+  font-family: @pt-sans;
+  font-weight: 400;
+  color: @white;
+  line-height: 1.5;
+  font-size: 1.2rem;
+}
+.contact__form {
+  width: 50%;
+}
+@keyframes spinner {
+  0% {
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0);
+  }
+  to {
+    -moz-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}

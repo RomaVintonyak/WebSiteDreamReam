@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="створення та розробка веб сайтів. Підтримка існуючих проектів"
+    />
+    <meta
+      name="keywords"
+      content="Веб сайт. Landing page. Portfolio. Create web site"
+    />
+    <meta name="google" content="notranslate" />
+    <!--main style-->
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <!--google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,700|PT+Sans+Caption:400,700|Roboto:400,700,700i,900&display=swap&subset=cyrillic-ext,latin-ext"
+      rel="stylesheet"
+    />
+    <!--font awersome-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+    <!--five icon-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../img/faveIcon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../img/faveIcon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../img/faveIcon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/faveIcon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="../img/faveIcon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Dream Team Developer Studio</title>
+  </head>
+  <body>
+    <!--content contact page-->
+    <main>
+      <div class="contact__bg wow fadeIn">
+        <div class="contact__overlay">
+          <div class="container">
+            <div class="contact__content">
+              <div class="contact__colum wow fadeInRight">
+                <h2 class="contact__title">DreamTeam IT Studio</h2>
+                <p class="contact__subtitle">
+                  Зверніться до нас, і ми втілимо Ваші побажання в реальність.
+                </p>
+                <div class="contact__row">
+                  <div class="contact__icon">
+                    <a href="#"><i class="fab fa-git"></i></a>
+                  </div>
+                  <div class="contact__text">
+                    Наші проекти (wow контент захищений авторським правом!).
+                  </div>
+                </div>
+                <div class="contact__row">
+                  <div class="contact__icon">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  </div>
+                  <div class="contact__text">Ми у соціальних мережах.</div>
+                </div>
+                <div class="contact__row">
+                  <div class="contact__icon">
+                    <a href="skype:romashka470?call"
+                      ><i class="fab fa-skype"></i
+                    ></a>
+                  </div>
+                  <div class="contact__text">Напишіть нам у скайп.</div>
+                </div>
+                <div class="contact__row">
+                  <div class="contact__icon">
+                    <a href="tell:+38097763822?call"
+                      ><i class="fab fa-viber"></i
+                    ></a>
+                  </div>
+                  <div class="contact__text">
+                    Чекаємо на Ваші дзвоники. +38097-763-58-22
+                  </div>
+                </div>
+              </div>
+              <div class="contact__form wow fadeInLeft"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--footer menu-->
+      <div class="container">
+        <nav class="nav__menu wow fadeInDown" id="navMenu">
+          <div class="nav__logo">
+            <p>DreamTeam</p>
+          </div>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="../index.html">Головна</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="../src/about_us.html">Про нас</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="../src/servicess.html">Послуги</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="../src/project.html">Наші роботи</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link active" href="../src/contact.html"
+                >Контакти</a
+              >
+            </li>
+          </ul>
+          <div class="burger_button" id="navToggle">
+            <span class="bubger__icon"></span>
+          </div>
+        </nav>
+      </div>
+      <!--aside block button-->
+      <div class="aside__button">
+        <div class="button__content">
+          <a href="#"><i class="fab fa-github-square"></i></a>
+        </div>
+        <div class="button__content">
+          <a href="#"><i class="fab fa-skype"></i></a>
+        </div>
+        <div class="button__content">
+          <a href="#"><i class="fab fa-facebook-square"></i></a>
+        </div>
+      </div>
+      <!--Copyright block-->
+      <div class="copyright">
+        <p class="copyright__text">
+          DreamTeam Developer Studio &copy;2019 -
+          <script type="text/javascript">
+            document.write(new Date().getFullYear());
+          </script>
+        </p>
+      </div>
+    </main>
+    <!--jquery library-->
+    <script
+      type="text/javascript"
+      src="../js/vendor/jquery-3.3.1.min.js"
+    ></script>
+    <!--wow js https://wowjs.uk-->
+    <script type="text/javascript" src="../js/vendor/wow.min.js"></script>
+    <script type="text/javascript">
+      wow = new WOW({
+        boxClass: "wow",
+        animateClass: "animated",
+        offset: 0,
+        mobile: false,
+        live: true
+      });
+      wow.init();
+    </script>
+    <!--main script-->
+    <script type="text/javascript" src="../js/main.js"></script>
+  </body>
+</html>
