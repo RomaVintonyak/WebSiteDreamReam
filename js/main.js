@@ -26,7 +26,7 @@ $(function() {
   });
   /*hover for galery*/
   var hoverImg = $(".img__content");
-  hoverImg.on("hover", function(){
-    hoverImg.toggleClass("zoomOut");
+  hoverImg.hover(function(){
+    hoverImg.toggleClass("zoomIn");
   });
 });
