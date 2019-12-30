@@ -102,7 +102,7 @@
                 <div class="contact__form wow fadeInLeft">
                   <div class="form__content text__center">
                     <h2>Напишіть нам:</h2>
-                    <form action="../php/mail.php" method="POST">
+                    <form action="../php/mail.php" method="POST" id="sendMail">
                       <div class="form__line">
                         <div class="form__icon">
                           <i class="fas fa-user"></i>
@@ -141,13 +141,12 @@
                           <label for="user__text"
                             >Введіть Ваше повідомлення</label
                           >
-                          <textarea
+                          <input
                             name="user__text"
                             id="user__text"
                             placeholder="enter your message"
                             required
-                          >
-                          </textarea>
+                          />
                         </div>
                       </div>
                     </form>
@@ -155,6 +154,7 @@
                       Відправити<i class="far fa-paper-plane"></i>
                     </button>
                   </div>
+                  <div id="erorMesag"></div>
                 </div>
               </div>
             </div>
