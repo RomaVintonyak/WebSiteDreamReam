@@ -82,18 +82,4 @@ $(function () {
     arrows: false,
     dots: true
   });
-  $("#reviews-prev").on("click", function(event) {
-    event.preventDefault();
-    var curentSlider = $(this)
-      .parents(".container")
-      .find('[data-slider="slider"]');
-    curentSlider.slick("slickPrev");
-  });
-  $("#reviews-next").on("click", function(event) {
-    event.preventDefault();
-    var curentSlider = $(this)
-      .parents(".container")
-      .find('[data-slider="slider"]');
-    curentSlider.slick("slickNext");
-  });
 });
