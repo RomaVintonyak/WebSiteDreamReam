@@ -29,9 +29,38 @@
   display: flex;
   padding: 0 4rem;
   margin-top: 6rem;
+  @media @notebook{
+    padding: 0 2rem;
+  }
+  @media @tablet{
+    flex-wrap: wrap;
+    padding: 0 2rem;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+  @media @mobile-sm{
+    padding: 0 1rem;;
+  }
+  @media @notebook-h{
+    padding: 0 0.5rem;
+    margin-top: 0.5rem;
+  }
+ @media (max-height: 560px){
+   flex-wrap: nowrap;
+ }
 }
 .contact__colum {
   width: 50%;
+ @media @tablet{
+   width: 100%;
+   margin-bottom: 1.5rem;
+ }
+ @media @notebook-h{
+   margin-bottom: 0.5rem;
+ }
+ @media (max-height: 560px){
+  margin-right: 1rem;
+}
 }
 .contact__title {
   color: @white;
@@ -41,6 +70,14 @@
   line-height: 1.2;
   margin-bottom: 0.5rem;
   text-shadow: 3px 3px 15px @white;
+  @media @mobile-sm{
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+  @media @notebook-h{
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+  }
   &::after {
     content: "";
     display: block;
@@ -48,6 +85,13 @@
     width: 100%;
     height: 3px;
     background-color: fade(@white, 60%);
+    @media @mobile-sm{
+      margin-top: 0.2rem;
+      height: 2px;
+    }
+    @media @notebook-h{
+      margin-top: 0.1rem;
+    }
   }
 }
 .contact__subtitle {
@@ -56,11 +100,25 @@
   color: @white;
   font-size: 1.5rem;
   margin-bottom: 1.6rem;
+  @media @mobile-sm{
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+  }
+  @media @notebook-h{
+    font-size: 0.6rem;
+    margin-bottom: 0.4rem;
+  }
 }
 .contact__row {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
+  @media @mobile-sm{
+    margin-bottom: 0.5rem;
+  }
+  @media @notebook-h{
+    margin-bottom: 0.3rem;
+  }
   &:last-child {
     margin-bottom: 0;
   }
@@ -69,6 +127,9 @@
   width: 2rem;
   height: 2rem;
   margin-right: 1rem;
+  @media @mobile-sm{
+    margin-right: 0.5rem;
+  }
   a {
     text-decoration: none;
     color: inherit;
@@ -88,6 +149,12 @@
     -moz-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    @media @mobile-sm{
+      font-size: 1.3rem;
+    }
+    @media @notebook-h{
+      font-size: 0.9rem;
+    }
   }
 }
 .contact__text {
@@ -96,6 +163,14 @@
   color: @white;
   line-height: 1.5;
   font-size: 1.2rem;
+  @media @mobile-sm{
+    line-height: 1;
+    font-size: 0.9rem;
+  }
+  @media @notebook-h{
+    line-height: 0.8;
+    font-size: 0.8rem;
+  }
 }
 .contact__form {
   width: 50%;
@@ -103,6 +178,10 @@
   border-radius: 10px;
   margin-left: 2rem;
   background-color: fade(@white, 80%);
+  @media @tablet{
+    margin-left: 0;
+    width: 100%;
+  }
 }
 .form__content {
   padding: 0 1rem;
@@ -114,6 +193,16 @@
     font-family: @pt-sans;
     margin-bottom: 0.5rem;
     text-shadow: 3px 3px 15px rgba(@black, 0.7);
+    @media @mobile-sm{
+      margin-top: 0.3rem;
+      margin-bottom: 0.3rem;
+      font-size: 1.1rem;
+    }
+    @media @notebook-h{
+      margin-top: 0.2rem;
+      margin-bottom: 0.2rem;
+      font-size: 0.9rem;
+    }
     &::after {
       content: "";
       display: block;
@@ -121,6 +210,12 @@
       height: 2px;
       background-color: fade(@black, 60%);
       margin-top: 0.5rem;
+      @media @mobile-sm{
+        margin-top: 0.3rem;
+      }
+      @media @notebook-h{
+        margin-top: 0.2rem;
+      }
     }
   }
 }
@@ -128,11 +223,23 @@
   display: flex;
   margin-top: 1rem;
   align-items: center;
+  @media @mobile-sm{
+    margin-top: 0.5rem;
+  }
+  @media @notebook-h{
+    margin-top: 0.2rem;
+  }
 }
 .form__icon {
   width: 20%;
   color: rgba(@black, 0.5);
   font-size: 2rem;
+  @media @mobile-sm{
+    font-size: 1.5rem;
+  }
+  @media @notebook-h{
+    font-size: 1rem;
+  }
 }
 .input__red{
   border: 1px solid red!important;
@@ -160,6 +267,9 @@
     padding-left: 1rem;
     font-family: @pt-sans;
     margin: 0;
+    @media @mobile-h{
+      height: 1rem;
+    }
     &:focus {
       outline-color: @orange;
     }
@@ -167,6 +277,9 @@
 }
 #user__text{
   height: 4rem;
+  @media @mobile-h{
+    height: 2rem;
+  }
 }
 form {
   &::after {
@@ -176,6 +289,12 @@ form {
     height: 2px;
     background-color: fade(@black, 60%);
     margin-top: 1rem;
+    @media @mobile-sm{
+      margin-top: 0.5rem;
+    }
+    @media @notebook-h{
+      margin-top: 0.2rem;
+    }
   }
 }
 #erorMesag{
@@ -185,6 +304,9 @@ form {
   font-size: 1rem;
   margin-left: 1rem;
   margin-top: 0.5rem;
+  @media @mobile-sm{
+    font-size: 0.5rem;
+  }
 }
 @keyframes spinner {
   0% {
