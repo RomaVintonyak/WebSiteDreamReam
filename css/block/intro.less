@@ -92,6 +92,9 @@
     flex-wrap: wrap;
     margin-top: 1rem;
   }
+  @media @notebook-h{
+    flex-wrap: nowrap;
+  }
 }
 .content__colum {
   width: 30%;
@@ -125,6 +128,10 @@
   @media @mobile-sm{
     height: 6rem;
     width: 70%;
+  }
+  @media @notebook-h{
+    margin: 1rem;
+    width: 20%;
   }
   i {
     color: @white;
