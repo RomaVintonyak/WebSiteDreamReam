@@ -53,5 +53,47 @@ $(function () {
       return false;
     }
     $("#erorMesag").text("");
+    $.ajax({
+      url: '../php/mail.php',
+      type: 'POST',
+      cache: false,
+      data: {'name': name, 'mail': mail, 'phone': phone, 'mesag': mesag},
+      dataType: 'html',
+      beforeSend: function () {
+         sendBtn.prop("disabled", true);
+      },
+      success: function (data) {
+          if (!data)
+         alert("Повідомлення не відправлено, заповніть коректно усі поля");
+          else
+              alert("Дякуємо за Ваше звернення");
+              sendBtn.trigger("reset");
+         sendBtn.prop("disabled", false);
+      }
+  });
+  });
+  /*slick slider https://kenwheeler.github.io/slick/*/
+  var workSlider = $("[data-slider]");
+  workSlider.slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    arrows: false,
+    dots: true
+  });
+  $("#reviews-prev").on("click", function(event) {
+    event.preventDefault();
+    var curentSlider = $(this)
+      .parents(".container")
+      .find('[data-slider="slider"]');
+    curentSlider.slick("slickPrev");
+  });
+  $("#reviews-next").on("click", function(event) {
+    event.preventDefault();
+    var curentSlider = $(this)
+      .parents(".container")
+      .find('[data-slider="slider"]');
+    curentSlider.slick("slickNext");
   });
 });
