@@ -47,11 +47,11 @@ $(function () {
       $("#user__name").addClass("input__green");
       $("#user__email").addClass("input__red");
       return false;
-    } else if (mesage == "" ) {
-     $("#erorMesag").text("Напишіть повідомлення");
-     $("#user__email").removeClass("input__red");
-     $("#user__email").addClass("input__green"); 
-     $("#user__text").addClass("input__green");
+    } else if (mesage == "") {
+      $("#erorMesag").text("Напишіть повідомлення");
+      $("#user__email").removeClass("input__red");
+      $("#user__email").addClass("input__green");
+      $("#user__text").addClass("input__green");
       return false;
     }
     $("#erorMesag").text("");
@@ -59,20 +59,20 @@ $(function () {
       url: '../php/mail.php',
       type: 'POST',
       cache: false,
-      data: {'name': name, 'mail': mail, 'phone': phone, 'mesag': mesag},
+      data: { 'name': name, 'mail': mail, 'phone': phone, 'mesag': mesag },
       dataType: 'html',
       beforeSend: function () {
-         sendBtn.prop("disabled", true);
+        sendBtn.prop("disabled", true);
       },
       success: function (data) {
-          if (!data)
-         alert("Повідомлення не відправлено, заповніть коректно усі поля");
-          else
-              alert("Дякуємо за Ваше звернення");
-              sendBtn.trigger("reset");
-         sendBtn.prop("disabled", false);
+        if (!data)
+          alert("Повідомлення не відправлено, заповніть коректно усі поля");
+        else
+          alert("Дякуємо за Ваше звернення");
+        sendBtn.trigger("reset");
+        sendBtn.prop("disabled", false);
       }
-  });
+    });
   });
   /*slick slider https://kenwheeler.github.io/slick/*/
   var workSlider = $("[data-slider]");
@@ -83,5 +83,17 @@ $(function () {
     fade: true,
     arrows: false,
     dots: true
+  });
+  $(".slider__prev").on("click", function () {
+    var currentSlider = $(this)
+      .parents(".project__galery")
+      .find('[data-slider="slider-galery"]');
+    currentSlider.slick("slickPrev");
+  });
+  $(".slider__next").on("click", function () {
+    var currentSlider = $(this)
+      .parents(".project__galery")
+      .find('[data-slider="slider-galery"]');
+    currentSlider.slick("slickNext");
   });
 });
