@@ -29,38 +29,40 @@
   display: flex;
   padding: 0 4rem;
   margin-top: 6rem;
-  @media @notebook{
+  @media @notebook {
     padding: 0 2rem;
   }
-  @media @tablet{
+  @media @tablet {
     flex-wrap: wrap;
     padding: 0 2rem;
     margin-top: 1rem;
     justify-content: center;
   }
-  @media @mobile-sm{
-    padding: 0 1rem;;
+  @media @mobile-sm {
+    padding: 0 1rem;
   }
-  @media @notebook-h{
-    padding: 0 0.5rem;
-    margin-top: 0.5rem;
+  @media @notebook-h {
+    @media @tablet {
+      padding: 0 0.5rem;
+      margin-top: 0.5rem;
+    }
   }
- @media (max-height: 560px){
-   flex-wrap: nowrap;
- }
+  @media (max-height: 560px) {
+    flex-wrap: nowrap;
+  }
 }
 .contact__colum {
   width: 50%;
- @media @tablet{
-   width: 100%;
-   margin-bottom: 1.5rem;
- }
- @media @notebook-h{
-   margin-bottom: 0.5rem;
- }
- @media (max-height: 560px){
-  margin-right: 1rem;
-}
+  @media @tablet {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  @media @notebook-h {
+    margin-bottom: 0.5rem;
+  }
+  @media (max-height: 560px) {
+    margin-right: 1rem;
+  }
 }
 .contact__title {
   color: @white;
@@ -70,13 +72,15 @@
   line-height: 1.2;
   margin-bottom: 0.5rem;
   text-shadow: 3px 3px 15px @white;
-  @media @mobile-sm{
+  @media @mobile-sm {
     font-size: 1.2rem;
     margin-bottom: 0.3rem;
   }
-  @media @notebook-h{
-    font-size: 0.9rem;
-    margin-bottom: 0.2rem;
+  @media @notebook-h {
+    @media @tablet {
+      font-size: 0.9rem;
+      margin-bottom: 0.2rem;
+    }
   }
   &::after {
     content: "";
@@ -85,11 +89,11 @@
     width: 100%;
     height: 3px;
     background-color: fade(@white, 60%);
-    @media @mobile-sm{
+    @media @mobile-sm {
       margin-top: 0.2rem;
       height: 2px;
     }
-    @media @notebook-h{
+    @media @notebook-h {
       margin-top: 0.1rem;
     }
   }
@@ -100,23 +104,25 @@
   color: @white;
   font-size: 1.5rem;
   margin-bottom: 1.6rem;
-  @media @mobile-sm{
+  @media @mobile-sm {
     font-size: 0.9rem;
     margin-bottom: 0.6rem;
   }
-  @media @notebook-h{
-    font-size: 0.6rem;
-    margin-bottom: 0.4rem;
+  @media @notebook-h {
+    @media @tablet {
+      font-size: 0.6rem;
+      margin-bottom: 0.4rem;
+    }
   }
 }
 .contact__row {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
-  @media @mobile-sm{
+  @media @mobile-sm {
     margin-bottom: 0.5rem;
   }
-  @media @notebook-h{
+  @media @notebook-h {
     margin-bottom: 0.3rem;
   }
   &:last-child {
@@ -127,7 +133,7 @@
   width: 2rem;
   height: 2rem;
   margin-right: 1rem;
-  @media @mobile-sm{
+  @media @mobile-sm {
     margin-right: 0.5rem;
   }
   a {
@@ -149,11 +155,13 @@
     -moz-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    @media @mobile-sm{
+    @media @mobile-sm {
       font-size: 1.3rem;
     }
-    @media @notebook-h{
-      font-size: 0.9rem;
+    @media @notebook-h {
+      @media @tablet {
+        font-size: 0.9rem;
+      }
     }
   }
 }
@@ -163,13 +171,16 @@
   color: @white;
   line-height: 1.5;
   font-size: 1.2rem;
-  @media @mobile-sm{
-    line-height: 1;
-    font-size: 0.9rem;
+  @media @tablet{
+    font-size: 1rem;
   }
-  @media @notebook-h{
-    line-height: 0.8;
+  @media @mobile{
+    line-height: 0.9;
+    font-size: 0.9rem;
+    @media @mobile-h{
+      line-height: 1.1;
     font-size: 0.8rem;
+    }
   }
 }
 .contact__form {
@@ -178,7 +189,7 @@
   border-radius: 10px;
   margin-left: 2rem;
   background-color: fade(@white, 80%);
-  @media @tablet{
+  @media @tablet {
     margin-left: 0;
     width: 100%;
   }
@@ -193,12 +204,12 @@
     font-family: @pt-sans;
     margin-bottom: 0.5rem;
     text-shadow: 3px 3px 15px rgba(@black, 0.7);
-    @media @mobile-sm{
+    @media @mobile-sm {
       margin-top: 0.3rem;
       margin-bottom: 0.3rem;
       font-size: 1.1rem;
     }
-    @media @notebook-h{
+    @media @notebook-h {
       margin-top: 0.2rem;
       margin-bottom: 0.2rem;
       font-size: 0.9rem;
@@ -210,10 +221,10 @@
       height: 2px;
       background-color: fade(@black, 60%);
       margin-top: 0.5rem;
-      @media @mobile-sm{
+      @media @mobile-sm {
         margin-top: 0.3rem;
       }
-      @media @notebook-h{
+      @media @notebook-h {
         margin-top: 0.2rem;
       }
     }
@@ -223,10 +234,10 @@
   display: flex;
   margin-top: 1rem;
   align-items: center;
-  @media @mobile-sm{
+  @media @mobile-sm {
     margin-top: 0.5rem;
   }
-  @media @notebook-h{
+  @media @notebook-h {
     margin-top: 0.2rem;
   }
 }
@@ -234,18 +245,18 @@
   width: 20%;
   color: rgba(@black, 0.5);
   font-size: 2rem;
-  @media @mobile-sm{
+  @media @mobile-sm {
     font-size: 1.5rem;
   }
-  @media @notebook-h{
+  @media @notebook-h {
     font-size: 1rem;
   }
 }
-.input__red{
-  border: 1px solid red!important;
+.input__red {
+  border: 1px solid red !important;
 }
-.input__green{
-  border: 1px solid green!important;
+.input__green {
+  border: 1px solid green !important;
 }
 .form__area {
   width: 80%;
@@ -267,7 +278,7 @@
     padding-left: 1rem;
     font-family: @pt-sans;
     margin: 0;
-    @media @mobile-h{
+    @media @mobile-h {
       height: 1rem;
     }
     &:focus {
@@ -275,9 +286,9 @@
     }
   }
 }
-#user__text{
+#user__text {
   height: 4rem;
-  @media @mobile-h{
+  @media @mobile-h {
     height: 2rem;
   }
 }
@@ -289,22 +300,22 @@ form {
     height: 2px;
     background-color: fade(@black, 60%);
     margin-top: 1rem;
-    @media @mobile-sm{
+    @media @mobile-sm {
       margin-top: 0.5rem;
     }
-    @media @notebook-h{
+    @media @notebook-h {
       margin-top: 0.2rem;
     }
   }
 }
-#erorMesag{
+#erorMesag {
   color: red;
   font-family: @pt-sans;
   font-weight: 700;
   font-size: 1rem;
   margin-left: 1rem;
   margin-top: 0.5rem;
-  @media @mobile-sm{
+  @media @mobile-sm {
     font-size: 0.5rem;
   }
 }

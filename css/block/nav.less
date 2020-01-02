@@ -19,7 +19,7 @@
   }
 }
 .nav__menu--h{
-  height: 38vh;
+  height: 40vh;
   transition: all 0.4s linear;
 }
 .nav__list {
@@ -62,7 +62,10 @@
   
   }
   @media @mobile-h{
-    line-height: 0.5;
+    line-height: 0.6;
+    &:last-child{
+      line-height: 0;
+    }
   }
   &:first-child {
     margin-left: 0;
@@ -79,7 +82,7 @@
     font-weight: 700;
   }
   @media @mobile-h{
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   &:after {
     content: "";
