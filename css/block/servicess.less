@@ -79,18 +79,22 @@
   height: 310px;
   overflow: hidden;
   transition: box-shadow 0.4s linear, transform 0.4s linear;
+  @media @mobile-h{
+    height: 100px;
+  }
   @media @tablet{
     height: 200px;
+    @media @mobile-h{
+      height: 140px;
+    }
   }
   @media @mobile{
-    height: 150px;
+    height: 140px;
   }
   @media @mobile-sm{
     height: 100px;
   }
-  @media @mobile-h{
-    height: 100px;
-  }
+  
   &:hover {
     cursor: pointer;
     transform: translateY(-10px);
