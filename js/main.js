@@ -23,6 +23,8 @@ $(function () {
     event.preventDefault();
     $(".bubger__icon").toggleClass("animate__burger");
     $(".nav__list").toggleClass("nav__list-mobile");
+    /*to nav menu toggle class*/
+    $(".nav__menu").toggleClass("nav__menu--h");
   });
   /*hover for galery*/
   var hoverImg = $(".img__content");

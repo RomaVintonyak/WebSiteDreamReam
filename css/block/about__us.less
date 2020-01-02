@@ -95,31 +95,34 @@
 .content__block {
   position: absolute;
   z-index: 2;
-  margin-top: 40vh;
+  margin-top: 35rem;
   display: flex;
+  @media @lcd{
+    margin-top: 25rem;
+  }
   @media @notebook {
     padding: 0 2.5rem;
-    margin-top: 36vh;
+    margin-top: 20rem;
   }
   @media @tablet {
-    margin-top: 30vh;
+   margin-top: 15rem;
   }
   @media @mobile {
     flex-wrap: wrap;
-    margin-top: 20vh;
+    margin-top: 10rem;
   }
   @media @mobile-sm{
-    margin-top: 18vh;
-    padding: 0 1.8rem;
+   padding: 0 1.8rem;
+   margin-top: 9rem;
   }
   @media @notebook-h{
-    margin-top: 30vh;
+
   }
   @media (max-height: 670px){
-    margin-top: 19vh;
+   
   }
   @media @mobile-h{
-    margin-top: 16vh;
+    margin-top: 4rem;
   }
 }
 .content__block--colum {
@@ -200,7 +203,7 @@
     @media @mobile-sm{
       font-size: 0.7rem;
     }
-    @media @mobile-h{
+    @media @notebook-h{
       font-size: 0.4rem;
     }
   }
